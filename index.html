@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victor (Vic0318) | Software Developer & Cloud Enthusiast</title>
+  <meta name="description" content="Portafolio profesional de Victor (Vic0318) - Desarrollador de Software especializado en desarrollo web, backend, bases de datos y arquitectura cloud.">
+  <meta name="author" content="Victor (Vic0318)">
+  
+  <!-- Open Graph / Meta Compartir -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://vic0318.github.io/">
+  <meta property="og:title" content="Victor (Vic0318) | Software Developer">
+  <meta property="og:description" content="Portafolio y proyectos de desarrollo de software, cloud y plataformas web.">
+  <meta property="og:image" content="https://github.com/Vic0318.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://github.com/Vic0318.png">
+
+  <!-- Google Fonts: Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Script inline anticolisión de tema (evita parpadeo FOUC) -->
+  <script>
+    (function() {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme) {
+        document.documentElement.setAttribute('data-theme', savedTheme);
+      } else {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-theme', prefersDark ? 'dark' : 'light');
+      }
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- Barra de Navegación -->
+  <header class="header" id="header">
+    <div class="container nav-container">
+      <a href="#inicio" class="logo" aria-label="Ir al inicio">
+        <span class="logo-bracket">&lt;</span><span class="logo-text">Vic0318</span><span class="logo-bracket"> /&gt;</span>
+      </a>
+
+      <nav class="nav" id="nav-menu" aria-label="Navegación principal">
+        <ul class="nav-list">
+          <li class="nav-item"><a href="#inicio" class="nav-link active">Inicio</a></li>
+          <li class="nav-item"><a href="#sobre-mi" class="nav-link">Sobre Mí</a></li>
+          <li class="nav-item"><a href="#habilidades" class="nav-link">Habilidades</a></li>
+          <li class="nav-item"><a href="#proyectos" class="nav-link">Proyectos</a></li>
+          <li class="nav-item"><a href="#trayectoria" class="nav-link">Trayectoria</a></li>
+          <li class="nav-item"><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <!-- Selector de Tema (Modo Claro / Oscuro) -->
+        <button id="theme-toggle" class="icon-btn" aria-label="Cambiar tema de color" title="Alternar modo claro/oscuro">
+          <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+          <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </button>
+
+        <!-- Botón Menú Móvil -->
+        <button id="nav-toggle" class="icon-btn mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="hero" id="inicio">
+      <div class="hero-bg-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="badge-status">
+            <span class="status-dot"></span>
+            <span>Disponible para nuevos proyectos y oportunidades</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hola, soy <span class="highlight-gradient">Victor</span>
+          </h1>
+          <p class="hero-subtitle">
+            <span class="code-font">&gt;</span> <span id="typing-text">Desarrollador de Software & Cloud Enthusiast</span>
+          </p>
+
+          <p class="hero-description">
+            Especializado en la creación de aplicaciones web escalables, arquitecturas de backend y despliegue de infraestructura basada en contenedores y cloud. Apasionado por escribir código limpio y resolver retos técnicos complejos.
+          </p>
+
+          <div class="hero-cta">
+            <a href="#proyectos" class="btn btn-primary">
+              <span>Explorar Proyectos</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+            <a href="#contacto" class="btn btn-secondary">
+              <span>Contactar</span>
+            </a>
+            <a href="https://github.com/Vic0318" target="_blank" rel="noopener noreferrer" class="btn btn-outline" aria-label="Perfil de GitHub">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+              </svg>
+              <span>GitHub</span>
+            </a>
+          </div>
+
+          <!-- Estadísticas Rápidas -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">15+</span>
+              <span class="stat-label">Repositorios Públicos</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">Full-Stack</span>
+              <span class="stat-label">Enfoque de Desarrollo</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-number">Cloud & Docker</span>
+              <span class="stat-label">Infraestructura y Bases</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="card-avatar">
+            <div class="avatar-glow"></div>
+            <img src="https://github.com/Vic0318.png" alt="Avatar de Victor (Vic0318)" class="avatar-img" loading="eager" width="220" height="220">
+            <div class="terminal-card">
+              <div class="terminal-header">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">developer@vic0318:~</span>
+              </div>
+              <div class="terminal-body code-font">
+                <p><span class="t-prompt">$</span> cat stack.json</p>
+                <p class="t-output">{</p>
+                <p class="t-output indent">"core": ["TypeScript", "Python"],</p>
+                <p class="t-output indent">"data": ["PostgreSQL", "CouchDB"],</p>
+                <p class="t-output indent">"devops": ["Docker", "Linux", "Git"],</p>
+                <p class="t-output indent">"status": "Ready to build 🚀"</p>
+                <p class="t-output">}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section class="section" id="sobre-mi">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Perfil</span>
+          <h2 class="section-title">Sobre Mí</h2>
+          <p class="section-subtitle">Conoce mi enfoque, motivación y experiencia técnica</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card main-bio">
+            <h3 class="about-card-title">Transformando ideas en soluciones tecnológicas</h3>
+            <p>
+              Soy un desarrollador apasionado por la ingeniería de software y el diseño de arquitecturas eficientes. Mi experiencia abarca desde el desarrollo web frontend y backend hasta el despliegue y gestión de bases de datos relacionales y NoSQL.
+            </p>
+            <p>
+              Me enfoco en crear software mantenible, seguro y bien estructurado. Disfruto trabajar con herramientas modernas de contenedorización como <strong>Docker</strong>, entornos en la nube (IaaS) y lenguajes versátiles como <strong>TypeScript</strong>, <strong>Python</strong> y <strong>Scala</strong>.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-pill">
+                <span class="pill-icon">💻</span>
+                <span>Desarrollo Web Moderno</span>
+              </div>
+              <div class="highlight-pill">
+                <span class="pill-icon">🐳</span>
+                <span>Contenedores y Docker Compose</span>
+              </div>
+              <div class="highlight-pill">
+                <span class="pill-icon">🗄️</span>
+                <span>Arquitectura de Bases de Datos</span>
+              </div>
+              <div class="highlight-pill">
+                <span class="pill-icon">🚀</span>
+                <span>Metodologías Ágiles & CI/CD</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-card info-card">
+            <h4 class="info-card-title">Datos Rápidos</h4>
+            <ul class="info-list">
+              <li>
+                <span class="info-label">Usuario GitHub:</span>
+                <span class="info-value"><a href="https://github.com/Vic0318" target="_blank" rel="noopener">@Vic0318</a></span>
+              </li>
+              <li>
+                <span class="info-label">Alias:</span>
+                <span class="info-value">Vamv2003</span>
+              </li>
+              <li>
+                <span class="info-label">Intereses:</span>
+                <span class="info-value">Cloud, DevOps, Web Platforms, Backend</span>
+              </li>
+              <li>
+                <span class="info-label">Enfoque actual:</span>
+                <span class="info-value">Sistemas distribuidos y desarrollo Full-Stack</span>
+              </li>
+              <li>
+                <span class="info-label">Disponibilidad:</span>
+                <span class="info-value text-accent">Proyectos & Prácticas / Empleo</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Habilidades Técnicas -->
+    <section class="section bg-alt" id="habilidades">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Tecnologías</span>
+          <h2 class="section-title">Habilidades Técnicas</h2>
+          <p class="section-subtitle">Herramientas, lenguajes y plataformas con las que desarrollo soluciones</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Lenguajes -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">⚡</div>
+              <h3 class="category-title">Lenguajes de Programación</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript" class="skill-icon">TypeScript</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" class="skill-icon">JavaScript</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python" class="skill-icon">Python</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/scala/scala-original.svg" alt="Scala" class="skill-icon">Scala</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" class="skill-icon">HTML5 / CSS3</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP" class="skill-icon">PHP</span>
+            </div>
+          </div>
+
+          <!-- Backend & Web -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">🌐</div>
+              <h3 class="category-title">Desarrollo Web & Backend</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flask/flask-original.svg" alt="Flask" class="skill-icon">Flask (Python)</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js" class="skill-icon">Node.js</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" alt="Vite" class="skill-icon">Vite / Frontend Tooling</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="REST APIs" class="skill-icon">APIs RESTful</span>
+              <span class="skill-tag">Arquitectura MVC</span>
+              <span class="skill-tag">ORMs & Modelado de Datos</span>
+            </div>
+          </div>
+
+          <!-- Bases de Datos & Cloud -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">🗄️</div>
+              <h3 class="category-title">Bases de Datos & Cloud</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL" class="skill-icon">PostgreSQL</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mariadb/mariadb-original.svg" alt="MariaDB" class="skill-icon">MariaDB</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/couchdb/couchdb-original.svg" alt="CouchDB" class="skill-icon">Apache CouchDB (NoSQL)</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" class="skill-icon">Docker & Docker Compose</span>
+              <span class="skill-tag">Infraestructura IaaS / Cloud</span>
+            </div>
+          </div>
+
+          <!-- Herramientas & DevOps -->
+          <div class="skill-category-card">
+            <div class="category-header">
+              <div class="category-icon">🛠️</div>
+              <h3 class="category-title">Herramientas & Entornos</h3>
+            </div>
+            <div class="skill-tags">
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" class="skill-icon">Git & Version Control</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub" class="skill-icon">GitHub & GitHub Pages</span>
+              <span class="skill-tag"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg" alt="Linux" class="skill-icon">Linux / Bash CLI</span>
+              <span class="skill-tag">GitHub Actions CI/CD</span>
+              <span class="skill-tag">Apache HTTP Server</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Proyectos Destacados -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Portafolio</span>
+          <h2 class="section-title">Proyectos Destacados</h2>
+          <p class="section-subtitle">Una selección de repositorios y proyectos que demuestran mi experiencia práctica</p>
+        </div>
+
+        <!-- Filtros de Proyectos -->
+        <div class="project-filters" role="tablist" aria-label="Filtro de proyectos">
+          <button class="filter-btn active" data-filter="all">Todos</button>
+          <button class="filter-btn" data-filter="web">Web & Frontend</button>
+          <button class="filter-btn" data-filter="backend">Backend & Cloud</button>
+          <button class="filter-btn" data-filter="db">Bases de Datos & Docker</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Proyecto 1: Plataformas Web -->
+          <article class="project-card" data-category="web">
+            <div class="project-card-header">
+              <div class="project-type-icon">🚀</div>
+              <div class="project-links">
+                <a href="https://github.com/Vic0318/proyecto_plataformas_web" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Ver código en GitHub" aria-label="Repositorio de Proyecto Plataformas Web">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">
+              <a href="https://github.com/Vic0318/proyecto_plataformas_web" target="_blank" rel="noopener noreferrer">
+                Plataforma Web Full Stack
+              </a>
+            </h3>
+            <p class="project-description">
+              Desarrollo de plataforma web moderna con TypeScript. Enfoque en tipado estricto, componentes reutilizables, consumo de APIs y arquitectura modular para plataformas en producción.
+            </p>
+            <div class="project-tags">
+              <span class="tag">TypeScript</span>
+              <span class="tag">Frontend</span>
+              <span class="tag">Web Architecture</span>
+            </div>
+          </article>
+
+          <!-- Proyecto 2: Flask IaaS -->
+          <article class="project-card" data-category="backend">
+            <div class="project-card-header">
+              <div class="project-type-icon">☁️</div>
+              <div class="project-links">
+                <a href="https://github.com/Vic0318/app-flask-iaas" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Ver código en GitHub" aria-label="Repositorio de App Flask IaaS">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">
+              <a href="https://github.com/Vic0318/app-flask-iaas" target="_blank" rel="noopener noreferrer">
+                Cloud App con Flask en IaaS
+              </a>
+            </h3>
+            <p class="project-description">
+              Implementación y despliegue de una aplicación backend con Flask configurada para infraestructura como servicio (IaaS). Enrutamiento dinámico, manejo de peticiones y preparación para escalado cloud.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">Flask</span>
+              <span class="tag">IaaS</span>
+              <span class="tag">Cloud</span>
+            </div>
+          </article>
+
+          <!-- Proyecto 3: Docker Compose Apache PHP BD -->
+          <article class="project-card" data-category="db">
+            <div class="project-card-header">
+              <div class="project-type-icon">🐳</div>
+              <div class="project-links">
+                <a href="https://github.com/Vic0318/docker-compose-apache-php-bd" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Ver código en GitHub" aria-label="Repositorio Docker Compose Apache PHP BD">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">
+              <a href="https://github.com/Vic0318/docker-compose-apache-php-bd" target="_blank" rel="noopener noreferrer">
+                Infraestructura Dockerizada LAMP / BD
+              </a>
+            </h3>
+            <p class="project-description">
+              Entorno orquestado con Docker Compose que integra servidor web Apache, PHP y bases de datos relacionales en redes internas aisladas con persistencia de volúmenes.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Docker</span>
+              <span class="tag">Docker Compose</span>
+              <span class="tag">Apache</span>
+              <span class="tag">SQL</span>
+            </div>
+          </article>
+
+          <!-- Proyecto 4: CouchDB Docker Base -->
+          <article class="project-card" data-category="db">
+            <div class="project-card-header">
+              <div class="project-type-icon">🍃</div>
+              <div class="project-links">
+                <a href="https://github.com/Vic0318/couchdb-docker-base" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Ver código en GitHub" aria-label="Repositorio CouchDB Docker Base">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">
+              <a href="https://github.com/Vic0318/couchdb-docker-base" target="_blank" rel="noopener noreferrer">
+                Arquitectura NoSQL con CouchDB
+              </a>
+            </h3>
+            <p class="project-description">
+              Configuración y gestión de clúster base NoSQL sobre Apache CouchDB mediante contenedores Docker. Manejo de documentos JSON, vistas MapReduce y replicación.
+            </p>
+            <div class="project-tags">
+              <span class="tag">CouchDB</span>
+              <span class="tag">NoSQL</span>
+              <span class="tag">Docker</span>
+              <span class="tag">JSON API</span>
+            </div>
+          </article>
+
+          <!-- Proyecto 5: ORM Multimotor MariaDB & Postgres -->
+          <article class="project-card" data-category="db">
+            <div class="project-card-header">
+              <div class="project-type-icon">⚙️</div>
+              <div class="project-links">
+                <a href="https://github.com/Vic0318/ejemplo-orm-tipos-v2" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Ver código en GitHub" aria-label="Repositorio ORM Tipos v2">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">
+              <a href="https://github.com/Vic0318/ejemplo-orm-tipos-v2" target="_blank" rel="noopener noreferrer">
+                Motor ORM MariaDB & PostgreSQL
+              </a>
+            </h3>
+            <p class="project-description">
+              Implementación de capa de persistencia con ORM para múltiples motores de bases de datos relacionales (MariaDB y PostgreSQL), mapeo de tipos avanzados y transacciones.
+            </p>
+            <div class="project-tags">
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MariaDB</span>
+              <span class="tag">ORM</span>
+              <span class="tag">Python/SQL</span>
+            </div>
+          </article>
+
+          <!-- Proyecto 6: Programación Funcional en Scala -->
+          <article class="project-card" data-category="backend">
+            <div class="project-card-header">
+              <div class="project-type-icon">🧩</div>
+              <div class="project-links">
+                <a href="https://github.com/Vic0318/ActividadSemanal" target="_blank" rel="noopener noreferrer" class="project-link-icon" title="Ver código en GitHub" aria-label="Repositorio ActividadSemanal en Scala">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">
+              <a href="https://github.com/Vic0318/ActividadSemanal" target="_blank" rel="noopener noreferrer">
+                Programación Funcional con Scala
+              </a>
+            </h3>
+            <p class="project-description">
+              Solución de algoritmos y estructuras de datos utilizando el paradigma funcional en Scala. Inmutabilidad, funciones de orden superior y tipado estático avanzado.
+            </p>
+            <div class="project-tags">
+              <span class="tag">Scala</span>
+              <span class="tag">Functional Programming</span>
+              <span class="tag">Data Structures</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="projects-more">
+          <a href="https://github.com/Vic0318?tab=repositories" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            <span>Ver todos los repositorios en GitHub</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trayectoria / Timeline -->
+    <section class="section bg-alt" id="trayectoria">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Evolución</span>
+          <h2 class="section-title">Trayectoria & Formación</h2>
+          <p class="section-subtitle">Mi camino de aprendizaje continuo y desarrollo profesional</p>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Actualidad</span>
+              <h3 class="timeline-title">Especialización en Arquitectura Web & Cloud</h3>
+              <p class="timeline-text">
+                Desarrollo activo de plataformas web completas, diseño de APIs robustas e integración de entornos en contenedores con Docker y bases de datos relacionales y no relacionales.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">2025 - 2026</span>
+              <h3 class="timeline-title">Plataformas Web & Tecnologías IaaS</h3>
+              <p class="timeline-text">
+                Diseño de aplicaciones con TypeScript, orquestación de servicios en la nube e implementación de patrones de persistencia multimotor con ORMs.
+              </p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <span class="timeline-date">Formación Continua</span>
+              <h3 class="timeline-title">Fundamentos de Computación y Paradigmas</h3>
+              <p class="timeline-text">
+                Dominio de paradigmas de programación (orientado a objetos, funcional con Scala, scripting con Python) y optimización de consultas SQL y NoSQL.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-tag">Conectemos</span>
+          <h2 class="section-title">Contacto</h2>
+          <p class="section-subtitle">¿Tienes una propuesta, proyecto o consulta? ¡Hablemos!</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3 class="contact-title">¿Listo para colaborar?</h3>
+            <p class="contact-text">
+              Estoy siempre interesado en escuchar sobre nuevos proyectos, oportunidades laborales, colaboraciones en código abierto o simplemente intercambiar ideas sobre tecnología.
+            </p>
+
+            <div class="contact-methods">
+              <div class="contact-method-card">
+                <div class="method-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">Email</span>
+                  <span class="method-val" id="email-text">vamv2003@gmail.com</span>
+                </div>
+                <button class="copy-btn" id="copy-email-btn" title="Copiar correo al portapapeles" aria-label="Copiar correo">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                  <span class="copy-tooltip" id="copy-tooltip">¡Copiado!</span>
+                </button>
+              </div>
+
+              <div class="contact-method-card">
+                <div class="method-icon">
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div class="method-details">
+                  <span class="method-label">GitHub</span>
+                  <a href="https://github.com/Vic0318" target="_blank" rel="noopener" class="method-val">github.com/Vic0318</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-form-container">
+            <form id="contact-form" class="contact-form" onsubmit="event.preventDefault(); window.handleContactSubmit(event);">
+              <div class="form-group">
+                <label for="name" class="form-label">Tu Nombre</label>
+                <input type="text" id="name" name="name" class="form-input" placeholder="Ej. Carlos Mendoza" required>
+              </div>
+
+              <div class="form-group">
+                <label for="email" class="form-label">Tu Correo Electrónico</label>
+                <input type="email" id="email" name="email" class="form-input" placeholder="tu-correo@ejemplo.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="subject" class="form-label">Asunto</label>
+                <input type="text" id="subject" name="subject" class="form-input" placeholder="Propuesta de proyecto / Consulta" required>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Mensaje</label>
+                <textarea id="message" name="message" rows="4" class="form-textarea" placeholder="Cuéntame en qué puedo ayudarte..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block" id="form-submit-btn">
+                <span>Enviar Mensaje</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+              </button>
+              <p class="form-status" id="form-status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-info">
+        <a href="#inicio" class="logo">
+          <span class="logo-bracket">&lt;</span><span class="logo-text">Vic0318</span><span class="logo-bracket"> /&gt;</span>
+        </a>
+        <p class="footer-desc">Portafolio web creado con HTML5, CSS moderno y JavaScript puro. Alojado con orgullo en GitHub Pages.</p>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="copyright">© 2026 Victor (Vic0318). Todos los derechos reservados.</p>
+        <a href="#inicio" class="back-to-top" aria-label="Volver arriba" title="Volver al inicio">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
